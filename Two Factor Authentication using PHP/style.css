@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    background: url('loginBackground.jpg') no-repeat center center/cover;
+    font-family: 'Inter', sans-serif;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: #000000;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold, ;
+    color: #f7070770;
+    text-shadow: 0 0 15px #ff003c, 0 0 40px #ff1a4f;
+    animation: glowRed 1.5s infinite alternate;
+}
+
+/* CONTAINER */
+#container {
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    width: 380px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 0, 60, 0.3), 0 0 60px rgba(255, 0, 60, 0.1);
+    backdrop-filter: blur(6px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* INPUT FIELDS */
+label {
+    font-size: 14px;
+    color: #888;
+    text-align: left;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    height: 45px;
+    padding: 12px;
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #222;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+    margin-bottom: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border: 1px solid #ff003c;
+    box-shadow: 0 0 10px #ff003c;
+}
+
+/* SUBMIT BUTTON (Login / OTP Verify) */
+input[type="submit"],
+button.verify-btn {
+    background: linear-gradient(90deg, #ff003c, #ff4f6f);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+button.verify-btn:hover {
+    background: linear-gradient(90deg, #ff4f6f, #ff003c);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff1a4f;
+}
+
+/* OTHER BUTTON */
+button {
+    background: linear-gradient(90deg, #ff003c, #ff4f6f);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff4f6f, #ff003c);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff1a4f;
+}
+
+/* LINKS */
+a {
+    color: #ff003c;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+p {
+    font-size: 14px;
+    color: #888888;
+    margin-top: 12px;
+}
+
+/* ERROR MESSAGE */
+.error {
+    color: #ff4f6f;
+    font-size: 14px;
+    margin-bottom: 12px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* ANIMATIONS */
+@keyframes glowRed {
+    0% { text-shadow: 0 0 10px #ff003c; }
+    50% { text-shadow: 0 0 20px #ff003c; }
+    100% { text-shadow: 0 0 10px #ff003c; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

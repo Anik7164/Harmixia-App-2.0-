@@ -1,1 +1,3 @@
-# Harmixia-App-2.0-
+Harmixia
+
+A emotion based music system with deep learning
